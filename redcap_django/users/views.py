@@ -2,6 +2,11 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.views.generic import DetailView, ListView, RedirectView, UpdateView
+from rest_framework.generics import GenericAPIView
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+
+from redcap_django.users.serializers import UserDetailSerializer
 
 User = get_user_model()
 
@@ -50,3 +55,11 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 
 
 user_redirect_view = UserRedirectView.as_view()
+
+
+class UserDetailAPIView(GenericAPIView):
+    permission_classes = (IsAuthenticated, )
+
+    def get(self, request):
+        s = UserDetailSerializer(instance=request.user)
+        return Response(s.data)
