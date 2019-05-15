@@ -3,6 +3,7 @@
 __pycache__/
 *.py[cod]
 *$py.class
+staticfiles/
 
 # C extensions
 *.so
@@ -329,3 +330,8 @@ redcap_django/media/
 .ipython/
 .env
 .envs/*
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

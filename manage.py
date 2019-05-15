@@ -7,7 +7,8 @@ from env import load_env
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "config.settings.local")
 
-    load_env()
+    if os.environ['DJANGO_SETTINGS_MODULE'] != 'config.settings.production':
+        load_env()
 
     try:
         from django.core.management import execute_from_command_line
