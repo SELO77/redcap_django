@@ -229,9 +229,12 @@ ACCOUNT_ADAPTER = "redcap_django.users.adapters.AccountAdapter"
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 SOCIALACCOUNT_ADAPTER = "redcap_django.users.adapters.SocialAccountAdapter"
 
-# REDCAP Stuff ...
 # ------------------------------------------------------------------------------
-# auth
+# ------------------------------------------------------------------------------
+# REDCAP Stuff ...
+
+# Auth & User
+# ------------------------------------------------------------------------------
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 60  # seconds
 ACCOUNT_USERNAME_BLACKLIST = [
@@ -251,3 +254,12 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 3
+
+
+# SMTP
+# ------------------------------------------------------------------------------
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True

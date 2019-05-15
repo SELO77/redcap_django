@@ -9,7 +9,7 @@ class User(AbstractUser):
     email = models.EmailField(_('email'), unique=True)
 
     USERNAME_FIELD = 'email'
-    REQUIRED_FIELDS = []
+    REQUIRED_FIELDS = ('username', )
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"id": self.pk})
