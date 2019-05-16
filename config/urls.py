@@ -1,18 +1,19 @@
 from django.conf import settings
-from django.urls import include, path
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.views.generic import TemplateView
+from django.http import JsonResponse
+from django.urls import include, path
 from django.views import defaults as default_views
-from rest_framework.response import Response
+from django.views.generic import TemplateView
 
 
 def health_check_view(request):
-    return Response({'ping': 'pong'})
+    return JsonResponse({'ping': 'pong'})
 
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("ping/", health_check_view),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
