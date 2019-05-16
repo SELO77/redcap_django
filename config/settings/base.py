@@ -11,6 +11,8 @@ APPS_DIR = ROOT_DIR.path("redcap_django")
 
 env = environ.Env()
 
+print("* ROOT_DIR: ", ROOT_DIR)
+
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
 if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
