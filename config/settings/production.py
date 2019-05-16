@@ -11,6 +11,7 @@ print("** ALLOWED_HOSTS: ", ALLOWED_HOSTS)
 print("** USE_DOCKER: ", env('USE_DOCKER'))
 print("** SECRET_KEY: ", env('SECRET_KEY'))
 
+
 # DATABASES
 # ------------------------------------------------------------------------------
 DATABASES = {
