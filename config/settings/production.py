@@ -10,6 +10,9 @@ ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["redcap.agency"])
 print("** ALLOWED_HOSTS: ", ALLOWED_HOSTS)
 print("** USE_DOCKER: ", env('USE_DOCKER'))
 print("** SECRET_KEY: ", SECRET_KEY)
+print("** SECRET_KEY: ", SECRET_KEY)
+print("** SECRET_KEY: ", SECRET_KEY)
+print("** SECRET_KEY: ", SECRET_KEY)
 
 
 # DATABASES
