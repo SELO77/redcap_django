@@ -47,3 +47,18 @@ $ python manage.py migrate
 $ python manage.py runserver
 ...
 ```
+
+
+### Elastic Beanstalk
+```bash
+pip install awsebcli
+aws configure
+> AWS Access Key ID [None]: AKIAJ***************
+> AWS Secret Access Key [None]: 9CNXeyB***********************
+> Default region name [None]:  ap-northeast-2
+> Default output format [None]: json
+eb --version
+eb init
+mkdir .ebextensions # COPY django application configurations for elastic beanstalk   
+
+```
