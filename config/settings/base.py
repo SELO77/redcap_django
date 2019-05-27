@@ -253,7 +253,7 @@ SOCIALACCOUNT_ADAPTER = "redcap_django.users.adapters.SocialAccountAdapter"
 ACCOUNT_LOGIN_ATTEMPTS_LIMIT = 5
 ACCOUNT_LOGIN_ATTEMPTS_TIMEOUT = 60  # seconds
 ACCOUNT_USERNAME_BLACKLIST = [
-    'admin', 'selo', 'theb', 'master', 'info', 'administer'
+    'admin', 'selo', 'master', 'info', 'administer'
 ]
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 
