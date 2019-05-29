@@ -1,3 +1,4 @@
+
 # Backend
 
 * API Backend and Admin
@@ -50,6 +51,10 @@ $ python manage.py runserver
 
 
 ### Elastic Beanstalk
+#### Prerequisite
+* Python 3.6 +
+* [AWS CLI 설치](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html)
+
 ```bash
 pip install awsebcli
 aws configure
