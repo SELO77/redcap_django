@@ -1,3 +1,4 @@
+
 # Backend
 
 * API Backend and Admin
@@ -50,6 +51,13 @@ $ python manage.py runserver
 
 
 ### Elastic Beanstalk
+#### Prerequisite
+* Python 3.6 +
+
+#### Installation
+* [AWS CLI 설치](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html)
+* [EB CLI 설치](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3-install-osx.html)
+
 ```bash
 pip install awsebcli
 aws configure
@@ -58,7 +66,12 @@ aws configure
 > Default region name [None]:  ap-northeast-2
 > Default output format [None]: json
 eb --version
+```
+
+
+#### Init
+```bash
 eb init
 mkdir .ebextensions # COPY django application configurations for elastic beanstalk   
-
+eb create '<environment_name>'
 ```
