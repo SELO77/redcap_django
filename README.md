@@ -53,10 +53,12 @@ $ python manage.py runserver
 ### Elastic Beanstalk
 #### Prerequisite
 * Python 3.6 +
+<<<<<<< HEAD
 
 #### Installation
 * [AWS CLI 설치](https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-chap-install.html)
 * [EB CLI 설치](https://docs.aws.amazon.com/ko_kr/elasticbeanstalk/latest/dg/eb-cli3-install-osx.html)
+
 
 ```bash
 pip install awsebcli
